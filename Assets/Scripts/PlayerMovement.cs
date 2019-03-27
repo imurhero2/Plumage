@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static bool isGliding;
 
     public float moveSpeed;
     public float jumpForce;
@@ -32,33 +33,48 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        GroundCheck();
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && grounded)
         {
             Debug.Log("Jumping");
             Jump();
         }
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump") && !grounded)
         {
             Glide();
+            isGliding = true;
         }
+        else
+        {
+            isGliding = false;
+        }
+    }
 
-        // NEEDS CODE: check if grounded
+    private void GroundCheck()
+    {
+        // Raycasts below player collider to detect ground.
+        if (Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 
     private void Move()
     {
         transform.Translate(Vector3.forward * h_move * moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.left * v_move * moveSpeed * Time.deltaTime);
-
         // Matches the player's y rotation with the camera's y rotation
         transform.eulerAngles = new Vector3(0, cam.transform.eulerAngles.y + 90, 0);
     }
 
     private void Jump()
     {
-        // NEEDS CODE: if grounded do this
         rb.AddForce(transform.up * jumpForce);
     }
 
@@ -67,6 +83,10 @@ public class PlayerMovement : MonoBehaviour
         // Limits the player's velocity to no less than minGlideVelocity and no more than maxGlideVelocity
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, minGlideVelocity, maxGlideVelocity), rb.velocity.z);
 
-        // SUGGESTION: Maybe increase movement speed slightly while gliding for a better feel.
+        /* Possible additions: 
+         *      1. Increase movement speed slightly while gliding for a better feel.
+         *      2. Remove ability to strafe mid-air
+         *      3. Make player always move forwards while gliding
+         */
     }
 }

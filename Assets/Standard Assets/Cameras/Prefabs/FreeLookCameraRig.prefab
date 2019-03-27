@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.078047514, y: 0.041197777, z: 0.6849456}
+  m_LocalPosition: {x: -10.47, y: 0.041197777, z: -19.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipMoveTime: 0.05
   returnTime: 0.4
-  sphereCastRadius: 0.1
+  sphereCastRadius: 0.3
   visualiseInEditor: 1
   closestDistance: 0.5
   dontClipTag: Player
