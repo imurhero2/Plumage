@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame (string Level)
     {
         StartCoroutine("Restart");
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
     }
 
     IEnumerator Restart()
@@ -26,19 +26,5 @@ public class MainMenu : MonoBehaviour
 
         // change this to whatever string the level 1 is called
         SceneManager.LoadScene("SampleScene");
-    }
-
-    public void OptionMenu()
-    {
-        Debug.Log("Game goes to options");
-        StartCoroutine("Options");
-    }
-
-    IEnumerator Options()
-    {
-        yield return new WaitForSecondsRealtime(0.5f);
-
-        // change this to whatever string the options/settings menu is called
-        SceneManager.LoadScene("OptionsMenu");
     }
 }

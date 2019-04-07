@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33382773510368190}
   - component: {fileID: 23548951077142964}
   - component: {fileID: 135553376725987452}
-  - component: {fileID: 114174220367214228}
+  - component: {fileID: 114497417974144078}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779526455222068}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114174220367214228
+--- !u!114 &114497417974144078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,11 +93,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1779526455222068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3d9a0c091c78945b4c37645a8105e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 693c4308f0a65294eb81671d1952d76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  hangTime: 10
+  speed: 5
+  hangTime: 1.15
 --- !u!135 &135553376725987452
 SphereCollider:
   m_ObjectHideFlags: 1

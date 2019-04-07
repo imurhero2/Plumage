@@ -22,10 +22,14 @@ public class PauseMenu: MonoBehaviour
         {
             if(isPaused)
             {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 ResumeGame();
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 isPaused = true;
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0f;

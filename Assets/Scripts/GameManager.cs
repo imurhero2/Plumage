@@ -21,3 +21,5 @@ public class GameManager : MonoBehaviour {
     }
 
 }
+// currentHighScore > bestHighScore
+// bestHighScore = currentHighScore

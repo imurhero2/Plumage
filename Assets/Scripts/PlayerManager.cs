@@ -47,6 +47,7 @@ public class PlayerManager : MonoBehaviour
             featherCount += 1;
             Destroy(other.gameObject);
             featherText.text = "Feathers: " + featherCount;
+            PlayerPrefs.SetInt("Feathers", featherCount);
         }
     }
 }
