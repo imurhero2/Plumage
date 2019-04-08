@@ -47,7 +47,12 @@ public class PlayerManager : MonoBehaviour
             featherCount += 1;
             Destroy(other.gameObject);
             featherText.text = "Feathers: " + featherCount;
-            PlayerPrefs.SetInt("Feathers", featherCount);
+            //PlayerPrefs.SetInt("Feathers", featherCount);
+            if (featherCount > PlayerPrefs.GetInt("FeatherHighscore"))
+            {
+                PlayerPrefs.SetInt("FeatherHighscore", featherCount);
+                Debug.Log("PlayerPrefs FeatherHighscore changed to: " + PlayerPrefs.GetInt("FeatherHighscore"));
+            }
         }
     }
 }

@@ -46,5 +46,6 @@ public class PauseMenu: MonoBehaviour
     public void ReturnToMain()
     {
         SceneManager.LoadScene(mainMenuScene);
+        PlayerPrefs.Save();
     }
 }

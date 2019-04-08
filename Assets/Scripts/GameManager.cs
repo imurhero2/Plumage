@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Quitting Application");
             Application.Quit();
         }
+        // For highscore testing purposes only
+        if (Input.GetKeyDown(UnityEngine.KeyCode.C))
+        {
+            PlayerPrefs.SetInt("FeatherHighscore", 0);
+            Debug.Log("PlayerPrefs FeatherHighscore set to: " + PlayerPrefs.GetInt("FeatherHighscore"));
+        }
     }
 
 }
