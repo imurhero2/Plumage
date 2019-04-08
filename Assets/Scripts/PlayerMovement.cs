@@ -52,16 +52,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void GroundCheck()
+    public bool GroundCheck()
     {
         // Raycasts below player collider to detect ground.
         if (Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f))
         {
-            grounded = true;
+            return grounded = true;
         }
         else
         {
-            grounded = false;
+           return grounded = false;
         }
     }
 
