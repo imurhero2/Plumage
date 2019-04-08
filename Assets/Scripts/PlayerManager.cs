@@ -26,6 +26,17 @@ public class PlayerManager : MonoBehaviour
         healthText.text = "Health: " + health;
     }
 
+    private void FixedUpdate()
+    {
+        if (transform.position.y <= -20)
+        {
+            // Start Coroutine
+            // Lock Camera
+            // Game Over at end of Coroutine
+            health = 0;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Projectile")
