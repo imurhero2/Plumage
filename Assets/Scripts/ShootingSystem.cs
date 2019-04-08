@@ -15,49 +15,61 @@ public class ShootingSystem : MonoBehaviour
 
     float fireTimer = 0f;
 
+    PlayerMovement jump;
+
     List<GameObject> lastProjectiles = new List<GameObject>();
- 
+
+    private void Start()
+    {
+        jump = target.GetComponent<PlayerMovement>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (beam && lastProjectiles.Count <= 0)
+        if (jump.GroundCheck() == false)
         {
-            float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(transform.position - target.transform.position));
-
-            if (angle < fieldOfView)
-                SpawnProjectiles();
-        }
-
-        else if (beam && lastProjectiles.Count > 0)
-        {
-           float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
-
-            if (angle > fieldOfView)
+            if (beam && lastProjectiles.Count <= 0)
             {
-                while (lastProjectiles.Count > 0)
-                {
-                    Destroy(lastProjectiles[0]);
-                    lastProjectiles.RemoveAt(0);
-                }
+                float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(transform.position - target.transform.position));
+
+                if (angle < fieldOfView)
+                    SpawnProjectiles();
             }
 
-        }
-
-        else
-        {
-            fireTimer += Time.deltaTime;
-
-            if (fireTimer >= fireRate)
+            else if (beam && lastProjectiles.Count > 0)
             {
                 float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
 
-                if (angle < fieldOfView)
+                if (angle > fieldOfView)
                 {
-                    SpawnProjectiles();
-                    fireTimer = 0f;
+                    while (lastProjectiles.Count > 0)
+                    {
+                        Destroy(lastProjectiles[0]);
+                        lastProjectiles.RemoveAt(0);
+                    }
+                }
+
+            }
+
+            else
+            {
+                fireTimer += Time.deltaTime;
+
+                if (fireTimer >= fireRate)
+                {
+                    float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+
+                    if (angle < fieldOfView)
+                    {
+                        SpawnProjectiles();
+                        fireTimer = 0f;
+                    }
                 }
             }
         }
+
+        
 
     }
 
