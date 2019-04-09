@@ -1,40 +1,15 @@
 fileFormatVersion: 2
-guid: 6b3f8d7eb92adbe49ba3fc0bd4d3d360
+guid: 8db5d471eacd4554a969556a908280a1
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface2
-    100004: polySurface3
-    100006: polySurface3 1
-    100008: polySurface6
-    100010: pSphere2
-    100012: pSphere6
-    100014: transform1
-    100016: transform2
-    100018: transform3
-    100020: transform4
     400000: //RootNode
-    400002: polySurface2
-    400004: polySurface3
-    400006: polySurface3 1
-    400008: polySurface6
-    400010: pSphere2
-    400012: pSphere6
-    400014: transform1
-    400016: transform2
-    400018: transform3
-    400020: transform4
     2100000: lambert2
-    2300000: polySurface6
-    3300000: polySurface6
-    4300000: polySurface6
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Turret  Tree House-UV
-    second: {fileID: 2800000, guid: 2fec55d8156a07a48912672dfab3ca96, type: 3}
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pPlane1
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
