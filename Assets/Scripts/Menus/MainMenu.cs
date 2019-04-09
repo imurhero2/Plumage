@@ -33,6 +33,6 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
 
         // change this to whatever string the level 1 is called
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
 }

@@ -99,11 +99,5 @@ public class PlayerMovement : MonoBehaviour
     {
         // Limits the player's velocity to no less than minGlideVelocity and no more than maxGlideVelocity
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, minGlideVelocity, maxGlideVelocity), rb.velocity.z);
-
-        /* Possible additions: 
-         *      1. Increase movement speed slightly while gliding for a better feel.
-         *      2. Remove ability to strafe mid-air
-         *      3. Make player always move forwards while gliding
-         */
     }
 }

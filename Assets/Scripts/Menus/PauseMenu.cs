@@ -18,7 +18,7 @@ public class PauseMenu: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(UnityEngine.KeyCode.P))
+        if(Input.GetButtonDown("Cancel"))
         {
             if(isPaused)
             {
@@ -47,5 +47,12 @@ public class PauseMenu: MonoBehaviour
     {
         SceneManager.LoadScene(mainMenuScene);
         PlayerPrefs.Save();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        isPaused = false;
+        Time.timeScale = 1f;
     }
 }

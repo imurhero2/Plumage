@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public static int featherCount;
     public Text healthText;
     public Text featherText;
+    public GameObject gameOverPanel;
+    public GameObject youWinPanel;
 
     void Start()
     {
@@ -33,7 +35,7 @@ public class PlayerManager : MonoBehaviour
             // Start Coroutine
             // Lock Camera
             // Game Over at end of Coroutine
-            health = 0;
+            GameOver();
         }
     }
 
@@ -48,8 +50,7 @@ public class PlayerManager : MonoBehaviour
             }
             if (health == 0)
             {
-                // Trigger game over
-                Debug.Log("Game Over Scrub!");
+                GameOver();
             }
         }
 
@@ -65,5 +66,21 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("PlayerPrefs FeatherHighscore changed to: " + PlayerPrefs.GetInt("FeatherHighscore"));
             }
         }
+
+        if (other.tag == "Finish")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            youWinPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void GameOver()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
