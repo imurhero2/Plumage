@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: ad7d43b9af8e46640aec4308469c6469
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: def:def2:def:def:def:def2:def:def:polySurface1
+    100002: def:def2:def:def:def:def2:def:def:polySurface11
+    100004: def:def2:def:def:def:def2:def:def:polySurface15
+    100006: def:def2:def:def:def:def2:def:def:polySurface18
+    100008: def:def2:def:def:def:def2:def:def:transform1
+    100010: def:def2:def:def:def:def2:def:def:transform10
+    100012: def:def2:def:def:def:def2:def:def:transform11
+    100014: def:def2:def:def:def:def2:def:def:transform12
+    100016: def:def2:def:def:def:def2:def:def:transform13
+    100018: def:def2:def:def:def:def2:def:def:transform14
+    100020: def:def2:def:def:def:def2:def:def:transform15
+    100022: def:def2:def:def:def:def2:def:def:transform16
+    100024: def:def2:def:def:def:def2:def:def:transform2
+    100026: def:def2:def:def:def:def2:def:def:transform3
+    100028: def:def2:def:def:def:def2:def:def:transform4
+    100030: def:def2:def:def:def:def2:def:def:transform5
+    100032: def:def2:def:def:def:def2:def:def:transform6
+    100034: def:def2:def:def:def:def2:def:def:transform7
+    100036: def:def2:def:def:def:def2:def:def:transform8
+    100038: def:def2:def:def:def:def2:def:def:transform9
+    100040: def:def2:def:def:def:def2:def:pasted__polySurface1
+    100042: def:def2:def:def:polySurface1
+    100044: def:def2:def:def:polySurface10
+    100046: def:def2:def:def:polySurface11
+    100048: def:def2:def:def:polySurface12
+    100050: def:def2:def:def:polySurface13
+    100052: def:def2:def:def:polySurface14
+    100054: def:def2:def:def:polySurface15
+    100056: def:def2:def:def:polySurface16
+    100058: def:def2:def:def:polySurface17
+    100060: def:def2:def:def:polySurface18
+    100062: def:def2:def:def:polySurface2
+    100064: def:def2:def:def:polySurface3
+    100066: def:def2:def:def:polySurface4
+    100068: def:def2:def:def:polySurface5
+    100070: def:def2:def:def:polySurface6
+    100072: def:def2:def:def:polySurface7
+    100074: def:def2:def:def:polySurface8
+    100076: def:def2:def:def:polySurface9
+    100078: def:def2:def:def:transform1
+    100080: //RootNode
+    400000: def:def2:def:def:def:def2:def:def:polySurface1
+    400002: def:def2:def:def:def:def2:def:def:polySurface11
+    400004: def:def2:def:def:def:def2:def:def:polySurface15
+    400006: def:def2:def:def:def:def2:def:def:polySurface18
+    400008: def:def2:def:def:def:def2:def:def:transform1
+    400010: def:def2:def:def:def:def2:def:def:transform10
+    400012: def:def2:def:def:def:def2:def:def:transform11
+    400014: def:def2:def:def:def:def2:def:def:transform12
+    400016: def:def2:def:def:def:def2:def:def:transform13
+    400018: def:def2:def:def:def:def2:def:def:transform14
+    400020: def:def2:def:def:def:def2:def:def:transform15
+    400022: def:def2:def:def:def:def2:def:def:transform16
+    400024: def:def2:def:def:def:def2:def:def:transform2
+    400026: def:def2:def:def:def:def2:def:def:transform3
+    400028: def:def2:def:def:def:def2:def:def:transform4
+    400030: def:def2:def:def:def:def2:def:def:transform5
+    400032: def:def2:def:def:def:def2:def:def:transform6
+    400034: def:def2:def:def:def:def2:def:def:transform7
+    400036: def:def2:def:def:def:def2:def:def:transform8
+    400038: def:def2:def:def:def:def2:def:def:transform9
+    400040: def:def2:def:def:def:def2:def:pasted__polySurface1
+    400042: def:def2:def:def:polySurface1
+    400044: def:def2:def:def:polySurface10
+    400046: def:def2:def:def:polySurface11
+    400048: def:def2:def:def:polySurface12
+    400050: def:def2:def:def:polySurface13
+    400052: def:def2:def:def:polySurface14
+    400054: def:def2:def:def:polySurface15
+    400056: def:def2:def:def:polySurface16
+    400058: def:def2:def:def:polySurface17
+    400060: def:def2:def:def:polySurface18
+    400062: def:def2:def:def:polySurface2
+    400064: def:def2:def:def:polySurface3
+    400066: def:def2:def:def:polySurface4
+    400068: def:def2:def:def:polySurface5
+    400070: def:def2:def:def:polySurface6
+    400072: def:def2:def:def:polySurface7
+    400074: def:def2:def:def:polySurface8
+    400076: def:def2:def:def:polySurface9
+    400078: def:def2:def:def:transform1
+    400080: //RootNode
+    2100000: def_def2_def_def_lambert8
+    2100002: def_def2_def_def_lambert7
+    2100004: def_def2_def_def_lambert5
+    2100006: def_def2_def_def_lambert6
+    2300000: def:def2:def:def:def:def2:def:def:polySurface11
+    2300002: def:def2:def:def:def:def2:def:def:polySurface15
+    2300004: def:def2:def:def:def:def2:def:def:polySurface18
+    2300006: def:def2:def:def:polySurface14
+    2300008: def:def2:def:def:polySurface17
+    3300000: def:def2:def:def:def:def2:def:def:polySurface11
+    3300002: def:def2:def:def:def:def2:def:def:polySurface15
+    3300004: def:def2:def:def:def:def2:def:def:polySurface18
+    3300006: def:def2:def:def:polySurface14
+    3300008: def:def2:def:def:polySurface17
+    4300000: def:def2:def:def:polySurface14
+    4300002: def:def2:def:def:polySurface17
+    4300004: def:def2:def:def:def:def2:def:def:polySurface15
+    4300006: def:def2:def:def:def:def2:def:def:polySurface11
+    4300008: def:def2:def:def:def:def2:def:def:polySurface18
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 40
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
