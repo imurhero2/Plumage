@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private float h_move;
     private float v_move;
     private float strafeSpeed;
+    private bool jumpUsed;
     private bool grounded;
     private Camera cam;
 
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         GroundCheck();
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && grounded && !jumpUsed)
         {
             Debug.Log("Jumping");
             Jump();
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Glide();
             isGliding = true;
+            Debug.Log("Gliding");
         }
         else
         {
@@ -92,7 +94,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        jumpUsed = true;
+        StartCoroutine("JumpDelay");
         rb.AddForce(transform.up * jumpForce);
+    }
+
+    IEnumerator JumpDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        jumpUsed = false;
     }
 
     private void Glide()
