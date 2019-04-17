@@ -7,9 +7,11 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 10f;
+    public float startTimeBtwShots;
     public Transform[] points;
     public int destPoint = 0;
     public Transform target;
+
     NavMeshAgent agent;
 
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class EnemyController : MonoBehaviour
                 FaceTarget();
             }
         }
+
     }
 
     void FaceTarget()

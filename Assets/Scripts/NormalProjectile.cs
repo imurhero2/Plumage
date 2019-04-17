@@ -30,6 +30,12 @@ public class NormalProjectile : BaseProjectile
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Destroy Projectile");
+        Destroy(this.gameObject);
+    }
+
     void Tidy()
     {
         Destroy(this.gameObject, hangTime);

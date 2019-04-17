@@ -10,6 +10,7 @@ public class ShootingSystem : MonoBehaviour
 
     public GameObject projectile;
     public GameObject target;
+    public Transform player;
 
     public List<GameObject> projectileSpawns;
 
@@ -32,16 +33,18 @@ public class ShootingSystem : MonoBehaviour
             if (beam && lastProjectiles.Count <= 0)
             {
                 float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(transform.position - target.transform.position));
+                float distance = Vector3.Distance(player.position, transform.position);
 
-                if (angle < fieldOfView)
+                if (distance < fieldOfView)
                     SpawnProjectiles();
             }
 
             else if (beam && lastProjectiles.Count > 0)
             {
                 float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+                float distance = Vector3.Distance(player.position, transform.position);
 
-                if (angle > fieldOfView)
+                if (distance > fieldOfView)
                 {
                     while (lastProjectiles.Count > 0)
                     {
@@ -59,8 +62,9 @@ public class ShootingSystem : MonoBehaviour
                 if (fireTimer >= fireRate)
                 {
                     float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+                    float distance = Vector3.Distance(player.position, transform.position);
 
-                    if (angle < fieldOfView)
+                    if (distance < fieldOfView)
                     {
                         SpawnProjectiles();
                         fireTimer = 0f;

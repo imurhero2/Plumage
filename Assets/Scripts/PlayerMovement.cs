@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
         defaultSpeed = moveSpeed;
         rb = GetComponent<Rigidbody>();
         cam = Camera.main;
-        strafeSpeed = moveSpeed;
     }
 
     private void Update()
@@ -59,13 +58,11 @@ public class PlayerMovement : MonoBehaviour
         }
         if (!grounded)
         {
-            strafeSpeed = 0;
             moveSpeed = glideSpeed;
         }
         else
         {
             moveSpeed = defaultSpeed;
-            strafeSpeed = defaultSpeed;
             
         }
 
@@ -86,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        transform.Translate(Vector3.forward * h_move * strafeSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * h_move * moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.left * v_move * moveSpeed * Time.deltaTime);
         // Matches the player's y rotation with the camera's y rotation
         transform.eulerAngles = new Vector3(0, cam.transform.eulerAngles.y + 90, 0);
