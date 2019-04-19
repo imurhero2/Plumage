@@ -7,7 +7,7 @@ public class GroundProjectileSpawn : MonoBehaviour
     // Only works if you make a child of the enemy object and place it at a specific point for it to spawn.
     
     public float startTimeBtwShots;
-    public Transform target;
+    private Transform target;
     public GameObject projectile;
 
     private float fireRate;

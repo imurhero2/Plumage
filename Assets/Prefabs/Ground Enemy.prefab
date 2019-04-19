@@ -199,6 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4002552837971508}
+  - component: {fileID: 114517092399149192}
   m_Layer: 0
   m_Name: Projectile Spawn Point
   m_TagString: Untagged
@@ -733,8 +734,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949244678960320}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.19709, y: 57.71015, z: 140.07274}
+  m_LocalRotation: {x: -0, y: 0.9518373, z: -0, w: 0.30660364}
+  m_LocalPosition: {x: -71.95709, y: 136.53, z: 320.0822}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4699609873976104}
@@ -903,6 +904,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114517092399149192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568446054484540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d10e58839072442b1772cd4b635d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwShots: 1
+  projectile: {fileID: 1746794372615104, guid: 33aa9a65d9a849b42b2f065085c38a86, type: 2}
 --- !u!114 &114710470383070522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -919,7 +933,6 @@ MonoBehaviour:
   points: []
   destPoint: 0
   target: {fileID: 0}
-  projectile: {fileID: 1779526455222068, guid: fc2537eef126f694da1e6f4c22d3dec9, type: 2}
 --- !u!136 &136247999835965936
 CapsuleCollider:
   m_ObjectHideFlags: 1
