@@ -12,11 +12,12 @@ public class GroundProjectile : MonoBehaviour
     private Transform player;
     private Vector3 target;
 
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector3(player.position.x, player.position.y);
+        target = new Vector3(player.position.x, player.position.y, player.position.z);
     }
 
     // Update is called once per frame
