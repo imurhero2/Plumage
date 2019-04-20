@@ -32,7 +32,10 @@ public class GroundProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     // projectile deletes itself based on what the hangtime is set to
@@ -45,6 +48,7 @@ public class GroundProjectile : MonoBehaviour
     {
         if (Vector3.Distance(target.transform.position, transform.position) < fieldOfView)
         {
+
             rb.velocity = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
         }
         
