@@ -18,6 +18,14 @@ public class PlayerManager : MonoBehaviour
     public Sprite emptyHeart;
     public Sprite fullHeart;
 
+    public AudioClip damageTakenSound;
+    public AudioClip featherSound;
+    private AudioSource source;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -28,6 +36,7 @@ public class PlayerManager : MonoBehaviour
 
     private void ModifyHealth(int modifier)
     {
+        source.PlayOneShot(damageTakenSound, source.volume);
         health += modifier;
         Debug.Log(health);
 
@@ -87,6 +96,7 @@ public class PlayerManager : MonoBehaviour
 
         if (other.tag == "Feather")
         {
+            source.PlayOneShot(featherSound, source.volume);
             featherCount += 1;
             Destroy(other.gameObject);
             featherText.text = "x" + featherCount.ToString();

@@ -14,11 +14,19 @@ public class ShootingSystem : MonoBehaviour
 
     public List<GameObject> projectileSpawns;
 
+    public AudioClip turretFireSound;
+    private AudioSource source;
+
     float fireTimer = 0f;
 
     PlayerMovement jump;
 
     List<GameObject> lastProjectiles = new List<GameObject>();
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -67,6 +75,7 @@ public class ShootingSystem : MonoBehaviour
                     if (distance < fieldOfView)
                     {
                         SpawnProjectiles();
+                        source.PlayOneShot(turretFireSound, source.volume);
                         fireTimer = 0f;
                     }
                 }
