@@ -9,38 +9,48 @@ public class GroundProjectile : MonoBehaviour
     public float fieldOfView;
 
     private float distance;
-    private Transform player;
-    private Vector3 target;
+    public Transform target;
 
+    Vector3 moveDirection;
+
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector3(player.position.x, player.position.y, player.position.z);
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody>();
+        moveDirection = (target.transform.position - transform.position).normalized * speed;
     }
 
     // Update is called once per frame
-    // projectile moves towards player and then deletes itself after whatever hangtime is
-    void Update()
+    private void Update()
     {
-        distance = Vector3.Distance(player.position, transform.position);
-
-        if (distance <= fieldOfView)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            if (transform.position.x == target.x && transform.position.y == target.y && transform.position.z == target.z)
-            {
-                Destroy(gameObject);
-            }
-        }
-     
+        PlayerEnter();
         Tidy();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     // projectile deletes itself based on what the hangtime is set to
     void Tidy()
     {
         Destroy(gameObject, hangTime);
+    }
+
+    void PlayerEnter()
+    {
+        if (Vector3.Distance(target.transform.position, transform.position) < fieldOfView)
+        {
+
+            rb.velocity = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
+        }
+        
     }
 }
