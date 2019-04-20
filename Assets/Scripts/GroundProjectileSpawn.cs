@@ -7,8 +7,10 @@ public class GroundProjectileSpawn : MonoBehaviour
     // Only works if you make a child of the enemy object and place it at a specific point for it to spawn.
     
     public float startTimeBtwShots;
-    private Transform target;
+    public Transform target;
     public GameObject projectile;
+
+    public float fieldOfView = 10f;
 
     private float fireRate;
 
@@ -23,7 +25,9 @@ public class GroundProjectileSpawn : MonoBehaviour
     {
         if (fireRate <= 0)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            if (target.transform.position.x <= fieldOfView && target.transform.position.z <= fieldOfView && target.transform.position.y <= fieldOfView)
+                Instantiate(projectile, transform.position, Quaternion.identity);
+
             fireRate = startTimeBtwShots;
         }
 

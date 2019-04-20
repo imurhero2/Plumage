@@ -21,6 +21,7 @@ public class GroundProjectile : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody>();
         moveDirection = (target.transform.position - transform.position).normalized * speed;
+
     }
 
     // Update is called once per frame
@@ -46,9 +47,8 @@ public class GroundProjectile : MonoBehaviour
 
     void PlayerEnter()
     {
-        if (Vector3.Distance(target.transform.position, transform.position) < fieldOfView)
+        if (Vector3.Distance(target.transform.position, transform.position) <= fieldOfView)
         {
-
             rb.velocity = new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
         }
         
