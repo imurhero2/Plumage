@@ -9,23 +9,54 @@ public class PlayerManager : MonoBehaviour
     public int startingHealth;
     public static int health;
     public static int featherCount;
-    public Text healthText;
     public Text featherText;
     public GameObject gameOverPanel;
     public GameObject youWinPanel;
+    public Image heart1;
+    public Image heart2;
+    public Image heart3;
+    public Sprite emptyHeart;
+    public Sprite fullHeart;
+
 
     void Start()
     {
         health = startingHealth;
         featherCount = 0;
-        healthText.text = "Health: " + health;
-        featherText.text = "Feathers: " + featherCount;
+        featherText.text = "x" + featherCount;
     }
 
     private void ModifyHealth(int modifier)
     {
         health += modifier;
-        healthText.text = "Health: " + health;
+        Debug.Log(health);
+
+        if (health >= 1)
+        {
+            heart1.sprite = fullHeart;
+        }
+        else
+        {
+            heart1.sprite = emptyHeart;
+        }
+
+        if (health >= 2)
+        {
+            heart2.sprite = fullHeart;
+        }
+        else
+        {
+            heart2.sprite = emptyHeart;
+        }
+
+        if (health >= 3)
+        {
+            heart3.sprite = fullHeart;
+        }
+        else
+        {
+            heart3.sprite = emptyHeart;
+        }
     }
 
     private void FixedUpdate()
@@ -58,7 +89,7 @@ public class PlayerManager : MonoBehaviour
         {
             featherCount += 1;
             Destroy(other.gameObject);
-            featherText.text = "Feathers: " + featherCount;
+            featherText.text = "x" + featherCount.ToString();
             //PlayerPrefs.SetInt("Feathers", featherCount);
             if (featherCount > PlayerPrefs.GetInt("FeatherHighscore"))
             {
