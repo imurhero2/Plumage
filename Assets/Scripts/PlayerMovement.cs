@@ -21,6 +21,16 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     private Camera cam;
 
+    private bool playingSound;
+
+    public AudioClip walkingSound;
+    private AudioSource source;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
 
     void Start()
     {
@@ -87,6 +97,23 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector3.left * v_move * moveSpeed * Time.deltaTime);
         // Matches the player's y rotation with the camera's y rotation
         transform.eulerAngles = new Vector3(0, cam.transform.eulerAngles.y + 90, 0);
+
+        if ((h_move > 0 || v_move > 0) && grounded)
+        {
+            if (!playingSound)
+            {
+                StartCoroutine("WalkingSFXDelay");
+            }
+            Debug.Log("Play Walking Sound");
+        }
+    }
+
+    IEnumerator WalkingSFXDelay()
+    {
+        playingSound = true;
+        source.PlayOneShot(walkingSound, source.volume);
+        yield return new WaitForSeconds(0.5f);
+        playingSound = false;
     }
 
     private void Jump()

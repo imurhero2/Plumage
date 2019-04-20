@@ -826,6 +826,7 @@ MonoBehaviour:
   jumpForce: 500
   minGlideVelocity: -2
   maxGlideVelocity: 5000
+  walkingSound: {fileID: 8300000, guid: 314d3bd7e10a7264c9daf4983657c36a, type: 3}
 --- !u!114 &114919321632554806
 MonoBehaviour:
   m_ObjectHideFlags: 1

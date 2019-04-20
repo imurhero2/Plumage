@@ -4390,6 +4390,11 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114019036024231206, guid: 0f439ec201fcc1c4c988faac44408c34,
+        type: 2}
+      propertyPath: walkingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 97f89a3148614814c98f22ba596d6616, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f439ec201fcc1c4c988faac44408c34, type: 2}
   m_IsPrefabParent: 0
@@ -5895,6 +5900,66 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 296144451}
+    - target: {fileID: 1651972348793092, guid: 64a0f5bc30c53374a8a4464ebb99a5e0, type: 2}
+      propertyPath: m_Name
+      value: Feather
+      objectReference: {fileID: 0}
+    - target: {fileID: 224963588744463980, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224724947891226320, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224440492157799932, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224006175546596450, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224616700547798640, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224109917566338888, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224333428760278572, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224813540538966744, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690026290574984, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8622cc08e7526854c885ab07332bc9cc,
+        type: 3}
+    - target: {fileID: 114690026290574984, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690026290574984, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64a0f5bc30c53374a8a4464ebb99a5e0, type: 2}
   m_IsPrefabParent: 0
