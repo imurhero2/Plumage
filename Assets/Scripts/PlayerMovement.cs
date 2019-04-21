@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static bool isGliding;
+    public static bool inDownDraft;
 
     public float moveSpeed;
     public float glideSpeed;
@@ -104,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 StartCoroutine("WalkingSFXDelay");
             }
-            Debug.Log("Play Walking Sound");
         }
     }
 
@@ -132,6 +132,9 @@ public class PlayerMovement : MonoBehaviour
     private void Glide()
     {
         // Limits the player's velocity to no less than minGlideVelocity and no more than maxGlideVelocity
-        rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, minGlideVelocity, maxGlideVelocity), rb.velocity.z);
+        if (!inDownDraft)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp(rb.velocity.y, minGlideVelocity, maxGlideVelocity), rb.velocity.z);
+        }
     }
 }
