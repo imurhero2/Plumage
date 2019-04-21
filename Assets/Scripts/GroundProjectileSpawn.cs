@@ -1,39 +1,46 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundProjectileSpawn : MonoBehaviour
 {
     // Only works if you make a child of the enemy object and place it at a specific point for it to spawn.
-    
-    public float startTimeBtwShots;
-    public Transform target;
-    public GameObject projectile;
 
-    public float fieldOfView = 10f;
+    public Transform player;
+    public float range = 50.0f;
+    public float bulletImpulse = 20.0f;
 
-    private float fireRate;
+    private bool onRange = false;
 
-    // Start is called before the first frame update
+    public Rigidbody projectile;
+
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        float rand = Random.Range(1.0f, 2.0f);
+        InvokeRepeating("Shoot", 2, rand);
     }
 
-    // Update is called once per frame
+    void Shoot()
+    {
+        if (onRange)
+        {
+            Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position + transform.forward, transform.rotation);
+            bullet.AddForce(transform.forward * bulletImpulse, ForceMode.Impulse);
+
+            Destroy(bullet.gameObject, 2);
+        }
+
+    }
+
     void Update()
     {
-        if (fireRate <= 0)
-        {
-            if (target.transform.position.x <= fieldOfView && target.transform.position.z <= fieldOfView && target.transform.position.y <= fieldOfView)
-                Instantiate(projectile, transform.position, Quaternion.identity);
 
-            fireRate = startTimeBtwShots;
-        }
+        onRange = Vector3.Distance(transform.position, player.position) < range;
 
-        else
-        {
-            fireRate -= Time.deltaTime;
-        }
+        if (onRange)
+            transform.LookAt(player);
     }
+
+
 }
+
