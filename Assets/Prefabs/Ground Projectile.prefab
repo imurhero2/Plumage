@@ -86,8 +86,8 @@ GameObject:
   - component: {fileID: 33851039109109514}
   - component: {fileID: 23764508328887758}
   - component: {fileID: 135899379247281230}
-  - component: {fileID: 114530131737339238}
   - component: {fileID: 54863943496077162}
+  - component: {fileID: 114101506088463302}
   m_Layer: 0
   m_Name: Ground Projectile
   m_TagString: Projectile
@@ -407,7 +407,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114530131737339238
+--- !u!114 &114101506088463302
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -415,12 +415,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1746794372615104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68e31fc63ecb07c4b8a86f7d4b4fc709, type: 3}
+  m_Script: {fileID: 11500000, guid: 693c4308f0a65294eb81671d1952d76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   hangTime: 5
-  fieldOfView: 15
 --- !u!135 &135899379247281230
 SphereCollider:
   m_ObjectHideFlags: 1
