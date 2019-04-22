@@ -11,8 +11,10 @@ public class FlyingEnemyTest : MonoBehaviour
     public float lookRadius = 10f;
 
     public Transform target;
+    public Transform guide;
 
     private float distance;
+    private float rotateGuide;
     private float x, y, z;
     private float counter;
 
@@ -31,6 +33,7 @@ public class FlyingEnemyTest : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(target.position, transform.position);
+        rotateGuide = Vector3.Distance(guide.position, transform.position);
 
         if (attack == false)
         {
@@ -40,10 +43,14 @@ public class FlyingEnemyTest : MonoBehaviour
             z = Mathf.Sin(counter) * length;
             
             // Newly added for rotation along its path.
-            Vector3 futurePos = new Vector3(x,y,z);
-            transform.LookAt(futurePos);
+           // Vector3 futurePos = new Vector3(x,y,z);
+            // transform.LookAt(futurePos);
 
             transform.position = startPos + new Vector3(x, y, z);
+            Vector3 direction = (guide.position - transform.position).normalized;
+
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = lookRotation;
         }
 
         if (distance <= lookRadius)
