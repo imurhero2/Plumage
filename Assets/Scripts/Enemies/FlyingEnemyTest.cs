@@ -56,11 +56,11 @@ public class FlyingEnemyTest : MonoBehaviour
 
     IEnumerator lookAt()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        speed = 30;
         transform.rotation = lookRotation;
+        yield return new WaitForSecondsRealtime(0.5f);
+        speed = 30;
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
