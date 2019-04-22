@@ -38,6 +38,10 @@ public class FlyingEnemyTest : MonoBehaviour
             x = Mathf.Cos(counter) * width;
             y = Mathf.Sin(counter) * height;
             z = Mathf.Sin(counter) * length;
+            
+            // Newly added for rotation along its path.
+            Vector3 futurePos = new Vector3(x,y,z);
+            transform.LookAt(futurePos);
 
             transform.position = startPos + new Vector3(x, y, z);
         }
@@ -55,8 +59,11 @@ public class FlyingEnemyTest : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+<<<<<<< HEAD
         // ^ Value never used
         speed = 30;
+=======
+>>>>>>> dfd941be44b4b2b8bdfb757c3234d10aae03e1a2
         transform.rotation = lookRotation;
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
