@@ -40,7 +40,8 @@ public class ShootingSystem : MonoBehaviour
         {
             if (beam && lastProjectiles.Count <= 0)
             {
-                float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(transform.position - target.transform.position));
+                //float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(transform.position - target.transform.position));
+                // ^ Value never used
                 float distance = Vector3.Distance(player.position, transform.position);
 
                 if (distance < fieldOfView)
@@ -49,7 +50,8 @@ public class ShootingSystem : MonoBehaviour
 
             else if (beam && lastProjectiles.Count > 0)
             {
-                float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+                //float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+                // ^ Value never used
                 float distance = Vector3.Distance(player.position, transform.position);
 
                 if (distance > fieldOfView)
@@ -69,7 +71,8 @@ public class ShootingSystem : MonoBehaviour
 
                 if (fireTimer >= fireRate)
                 {
-                    float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+                    //float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
+                    // ^ Value never used
                     float distance = Vector3.Distance(player.position, transform.position);
 
                     if (distance < fieldOfView)

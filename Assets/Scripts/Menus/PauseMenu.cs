@@ -10,11 +10,6 @@ public class PauseMenu: MonoBehaviour
     public GameObject pauseMenu;
     public bool isPaused;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log(SceneManager.sceneCountInBuildSettings);
-    }
 
     // Update is called once per frame
     void Update()

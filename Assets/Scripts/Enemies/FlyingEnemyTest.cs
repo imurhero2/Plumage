@@ -54,16 +54,18 @@ public class FlyingEnemyTest : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.5f);
         Vector3 direction = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        //Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        // ^ Value never used
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
+        {
             Destroy(gameObject);
-
-        Debug.Log("Should kill me");
+            Debug.Log("Should kill me");
+        }
     }
 
     private void OnDrawGizmosSelected()
