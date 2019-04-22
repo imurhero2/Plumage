@@ -62,6 +62,9 @@ public class FlyingEnemyTest : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
             Destroy(gameObject);
+            
+        else if (collision.gameObject.CompareTag("Player))
+            Destroy(gameObject);
 
         Debug.Log("Should kill me");
     }
