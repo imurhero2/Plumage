@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 14aa9bc58c17e044db2f369a3d10c2dd
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Back
+    100002: Bat_Enemy
+    100004: //RootNode
+    100006: Chest
+    100008: Head
+    100010: Left_Ankle
+    100012: Left_Leg
+    100014: Left_Mid
+    100016: Left_Tip
+    100018: Left_Wing
+    100020: Neck
+    100022: Right_Ankle
+    100024: Right_Leg
+    100026: Right_Mid
+    100028: Right_Tip
+    100030: Right_Wing
+    400000: Back
+    400002: Bat_Enemy
+    400004: //RootNode
+    400006: Chest
+    400008: Head
+    400010: Left_Ankle
+    400012: Left_Leg
+    400014: Left_Mid
+    400016: Left_Tip
+    400018: Left_Wing
+    400020: Neck
+    400022: Right_Ankle
+    400024: Right_Leg
+    400026: Right_Mid
+    400028: Right_Tip
+    400030: Right_Wing
+    2100000: aiStandardSurface4
+    2100002: bats_eyes
+    2100004: bats_body
+    2100006: bats_wings
+    4300000: Bat_Enemy
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Bat_Enemy
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface4
+    second: {fileID: 2100000, guid: 49d5c201cd7697f46862ed79f2de308a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bats_body
+    second: {fileID: 2100000, guid: 071e64d89f67c9847bf8fe343d930055, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bats_eyes
+    second: {fileID: 2100000, guid: c4571ec46b655e442a864424be305b09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bats_wings
+    second: {fileID: 2100000, guid: 97b14915d04d993469b7d2f2f370c907, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
