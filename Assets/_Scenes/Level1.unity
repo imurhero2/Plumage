@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3193681, g: 0.5281434, b: 0.78951216, a: 1}
+  m_IndirectSpecularColor: {r: 0.5594083, g: 0.72528607, b: 0.93292886, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2701,25 +2701,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 114517092399149192, guid: bf306ea058737e945948aafc30246ddd,
+    - target: {fileID: 114710470383070522, guid: bf306ea058737e945948aafc30246ddd,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 432792225}
-    - target: {fileID: 114710470383070522, guid: bf306ea058737e945948aafc30246ddd,
+    - target: {fileID: 114517092399149192, guid: bf306ea058737e945948aafc30246ddd,
         type: 2}
-      propertyPath: target
+      propertyPath: player
       value: 
       objectReference: {fileID: 432792225}
     - target: {fileID: 1949244678960320, guid: bf306ea058737e945948aafc30246ddd, type: 2}
       propertyPath: m_Name
       value: Ground Enemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114517092399149192, guid: bf306ea058737e945948aafc30246ddd,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 432792225}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf306ea058737e945948aafc30246ddd, type: 2}
   m_IsPrefabParent: 0
@@ -5817,12 +5812,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114194546695455802, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 296144451}
-    - target: {fileID: 114597154993039726, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+    - target: {fileID: 114095489158707644, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5832,7 +5822,7 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 296144451}
-    - target: {fileID: 114095489158707644, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+    - target: {fileID: 114726670647156490, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5842,7 +5832,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 296144451}
-    - target: {fileID: 114726670647156490, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+    - target: {fileID: 114597154993039726, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 296144451}
+    - target: {fileID: 114194546695455802, guid: 64a0f5bc30c53374a8a4464ebb99a5e0,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6719,6 +6714,11 @@ Prefab:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 267738685}
+    - target: {fileID: 114280904087796146, guid: dbfbe85df37e1214eb19ae161085f564,
+        type: 2}
+      propertyPath: nextLevelScene
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbfbe85df37e1214eb19ae161085f564, type: 2}
   m_IsPrefabParent: 0

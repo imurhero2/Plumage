@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuScene: MainMenu
+  nextLevelScene: Level1
   pauseMenu: {fileID: 0}
   isPaused: 0
 --- !u!114 &114930190203699320

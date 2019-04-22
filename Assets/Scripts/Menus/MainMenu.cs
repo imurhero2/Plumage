@@ -24,15 +24,8 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame (string Level)
     {
-        StartCoroutine("Restart");
+        PlayerManager.featherCount = 0;
         Time.timeScale = 1f;
-    }
-
-    IEnumerator Restart()
-    {
-        yield return new WaitForSecondsRealtime(0.5f);
-
-        // change this to whatever string the level 1 is called
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Tutorial");
     }
 }

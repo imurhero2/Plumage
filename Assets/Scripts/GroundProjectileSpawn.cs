@@ -14,6 +14,14 @@ public class GroundProjectileSpawn : MonoBehaviour
 
     public Rigidbody projectile;
 
+    public AudioClip GroundEnemyFireSound;
+    private AudioSource source;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         float rand = Random.Range(1.0f, 2.0f);
@@ -24,6 +32,7 @@ public class GroundProjectileSpawn : MonoBehaviour
     {
         if (onRange)
         {
+            source.PlayOneShot(GroundEnemyFireSound, source.volume);
             Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position + transform.forward, transform.rotation);
             bullet.AddForce(transform.forward * bulletImpulse, ForceMode.Impulse);
 

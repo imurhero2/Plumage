@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class PauseMenu: MonoBehaviour
 {
     public string mainMenuScene;
+    //public string nextLevelScene;
     public GameObject pauseMenu;
     public bool isPaused;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(SceneManager.sceneCountInBuildSettings);
     }
 
     // Update is called once per frame
@@ -47,6 +48,22 @@ public class PauseMenu: MonoBehaviour
     {
         SceneManager.LoadScene(mainMenuScene);
         PlayerPrefs.Save();
+    }
+
+    public void LoadNextLevel()
+    {
+        // if next scene exists, load it
+        if (SceneManager.sceneCountInBuildSettings > SceneManager.GetActiveScene().buildIndex + 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.Save();
+            isPaused = false;
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            ReturnToMain();
+        }
     }
 
     public void RestartGame()

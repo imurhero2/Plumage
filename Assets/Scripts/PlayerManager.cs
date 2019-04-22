@@ -30,7 +30,6 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         health = startingHealth;
-        featherCount = 0;
         featherText.text = "x" + featherCount;
     }
 
