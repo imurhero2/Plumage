@@ -38,6 +38,10 @@ public class FlyingEnemyTest : MonoBehaviour
             x = Mathf.Cos(counter) * width;
             y = Mathf.Sin(counter) * height;
             z = Mathf.Sin(counter) * length;
+            
+            // Newly added for rotation along its path.
+            Vector3 futurePos = new Vector3(x,y,z);
+            transform.LookAt(futurePos);
 
             transform.position = startPos + new Vector3(x, y, z);
         }
