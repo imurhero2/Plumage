@@ -22,10 +22,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void NewGame (string Level)
+    public void NewGame ()
     {
         PlayerManager.featherCount = 0;
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

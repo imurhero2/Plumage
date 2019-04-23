@@ -20,6 +20,7 @@ ModelImporter:
     2300000: pCone13
     3300000: pCone13
     4300000: pCone13
+    6400000: pCone13
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -53,7 +54,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 30
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

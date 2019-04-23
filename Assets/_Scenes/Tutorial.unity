@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.51785594, g: 0.67092466, b: 0.86274505, a: 1}
+  m_IndirectSpecularColor: {r: 0.5610427, g: 0.7227934, b: 0.9276653, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,7 +350,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75830b42331a38449b160544124d14f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.247293
+      value: 27.99
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75830b42331a38449b160544124d14f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -699,7 +699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad927400dd8e1774f84c93e30bdd2158, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.89
+      value: 33.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad927400dd8e1774f84c93e30bdd2158, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2796,15 +2796,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -32.36
+      value: -31.69
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 30.24
+      value: 28.52
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 161.11
+      value: 161.51
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3247,7 +3247,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad927400dd8e1774f84c93e30bdd2158, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.89
+      value: 32.85
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ad927400dd8e1774f84c93e30bdd2158, type: 3}
       propertyPath: m_LocalPosition.z
