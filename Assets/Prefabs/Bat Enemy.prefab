@@ -277,9 +277,10 @@ GameObject:
   - component: {fileID: 4700399755591076}
   - component: {fileID: 95703460743490832}
   - component: {fileID: 114100339592611814}
+  - component: {fileID: 135401420571493660}
   m_Layer: 0
   m_Name: BatAnimation (1)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,9 +570,22 @@ MonoBehaviour:
   height: 0
   length: 3
   lookRadius: 15
+  delayAttack: 2
   angularSpeed: 1
   target: {fileID: 0}
   guide: {fileID: 4429072909386098}
+--- !u!135 &135401420571493660
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981094115815678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0.5, z: 1}
 --- !u!137 &137387209678305324
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
