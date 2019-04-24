@@ -10,6 +10,7 @@ public class FlyingEnemyTest : MonoBehaviour
     public float length;
     public float lookRadius = 10f;
     public float delayAttack = 2f;
+    public float hangTime = 10f;
 
     public float angularSpeed;
 
@@ -82,7 +83,7 @@ public class FlyingEnemyTest : MonoBehaviour
         }
 
         // transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-        rb.AddForce(transform.forward, ForceMode.Impulse);
+        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
         playerClose = false;
 
         Tidy();
@@ -101,6 +102,6 @@ public class FlyingEnemyTest : MonoBehaviour
 
     private void Tidy()
     {
-        Destroy(gameObject, 10.0f);
+        Destroy(gameObject, hangTime);
     }
 }
