@@ -21,14 +21,18 @@ public class FlyingEnemyTest : MonoBehaviour
     private float counter;
 
     private bool attack = false;
+    private bool playerClose = false;
 
     private Vector3 startPos;
+    Vector3 direction;
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         startPos = transform.position;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -56,12 +60,12 @@ public class FlyingEnemyTest : MonoBehaviour
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDir);
 
-            
         }
 
         if (distance <= lookRadius)
         {
             attack = true;
+            playerClose = true;
             // Debug.Log(attack);
             StartCoroutine("lookAt");
         }
@@ -69,21 +73,22 @@ public class FlyingEnemyTest : MonoBehaviour
 
     IEnumerator lookAt()
     {
-        Vector3 direction = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         yield return new WaitForSecondsRealtime(delayAttack);
-        speed = 30;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        if (playerClose == true)
+        {
+            Vector3 direction = (target.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        }
+
+        // transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        rb.AddForce(transform.forward, ForceMode.Impulse);
+        playerClose = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            Destroy(gameObject);
-            Debug.Log("Should kill me");
-        }
+        Destroy(this.gameObject);
     }
 
     private void OnDrawGizmosSelected()
