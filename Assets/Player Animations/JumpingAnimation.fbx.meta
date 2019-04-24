@@ -1,56 +1,56 @@
 fileFormatVersion: 2
-guid: e11d22804d9df254fb0dd08f5bc26c4f
+guid: 3a77e1d778d1a6d409859a09a5aca0ff
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: chest
     100002: head
-    100004: left_ankle
-    100006: left_elbow
-    100008: left_heel
-    100010: left_hip
-    100012: left_knee
-    100014: left_shoulder
-    100016: left_wing
-    100018: left_wing_tip
-    100020: lower_body
-    100022: neck
-    100024: rig
-    100026: right_ankle
-    100028: right_elbow
-    100030: right_heel
-    100032: right_hip
-    100034: right_knee
-    100036: right_shoulder
-    100038: right_wing
-    100040: right_wing_tip
-    100042: Sparrow
-    100044: waist
-    100046: //RootNode
+    100004: //RootNode
+    100006: left_ankle
+    100008: left_elbow
+    100010: left_heel
+    100012: left_hip
+    100014: left_knee
+    100016: left_shoulder
+    100018: left_wing
+    100020: left_wing_tip
+    100022: lower_body
+    100024: neck
+    100026: rig
+    100028: right_ankle
+    100030: right_elbow
+    100032: right_heel
+    100034: right_hip
+    100036: right_knee
+    100038: right_shoulder
+    100040: right_wing
+    100042: right_wing_tip
+    100044: Sparrow
+    100046: waist
     400000: chest
     400002: head
-    400004: left_ankle
-    400006: left_elbow
-    400008: left_heel
-    400010: left_hip
-    400012: left_knee
-    400014: left_shoulder
-    400016: left_wing
-    400018: left_wing_tip
-    400020: lower_body
-    400022: neck
-    400024: rig
-    400026: right_ankle
-    400028: right_elbow
-    400030: right_heel
-    400032: right_hip
-    400034: right_knee
-    400036: right_shoulder
-    400038: right_wing
-    400040: right_wing_tip
-    400042: Sparrow
-    400044: waist
-    400046: //RootNode
+    400004: //RootNode
+    400006: left_ankle
+    400008: left_elbow
+    400010: left_heel
+    400012: left_hip
+    400014: left_knee
+    400016: left_shoulder
+    400018: left_wing
+    400020: left_wing_tip
+    400022: lower_body
+    400024: neck
+    400026: rig
+    400028: right_ankle
+    400030: right_elbow
+    400032: right_heel
+    400034: right_hip
+    400036: right_knee
+    400038: right_shoulder
+    400040: right_wing
+    400042: right_wing_tip
+    400044: Sparrow
+    400046: waist
     2100000: def_def2_def_def_lambert10
     4300000: Sparrow
     7400000: Take 001
@@ -83,35 +83,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 31
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
