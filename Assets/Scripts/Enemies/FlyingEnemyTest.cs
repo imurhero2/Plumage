@@ -101,6 +101,6 @@ public class FlyingEnemyTest : MonoBehaviour
 
     private void Tidy()
     {
-        Destroy(gameObject, 10.0f)
+        Destroy(gameObject, 10.0f);
     }
 }
