@@ -84,6 +84,8 @@ public class FlyingEnemyTest : MonoBehaviour
         // transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
         rb.AddForce(transform.forward, ForceMode.Impulse);
         playerClose = false;
+
+        Tidy();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -95,5 +97,10 @@ public class FlyingEnemyTest : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    private void Tidy()
+    {
+        Destroy(gameObject, 10.0f)
     }
 }
