@@ -9,6 +9,7 @@ public class FlyingEnemyTest : MonoBehaviour
     public float height;
     public float length;
     public float lookRadius = 10f;
+    public float delayAttack = 2f;
 
     public float angularSpeed;
 
@@ -71,7 +72,7 @@ public class FlyingEnemyTest : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(delayAttack);
         speed = 30;
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
