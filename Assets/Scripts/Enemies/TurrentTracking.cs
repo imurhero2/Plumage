@@ -8,13 +8,19 @@ public class TurrentTracking : MonoBehaviour
     public float fieldOfView;
     float distance;
 
-    public GameObject playerTarget = null;
-    public Transform target;
+    private GameObject playerTarget;
+    private Transform target;
 
     Vector3 lastKnownPosition = Vector3.zero;
     Quaternion lookRotation;
 
     PlayerMovement jump;
+
+    private void Awake()
+    {
+        playerTarget = GameObject.FindGameObjectsWithTag("Player")[0];
+        target = playerTarget.transform;
+    }
 
     private void Start()
     {

@@ -9,8 +9,8 @@ public class ShootingSystem : MonoBehaviour
     public bool beam;
 
     public GameObject projectile;
-    public GameObject target;
-    public Transform player;
+    private GameObject target;
+    private Transform targetTransform;
 
     public List<GameObject> projectileSpawns;
 
@@ -26,6 +26,8 @@ public class ShootingSystem : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        target = GameObject.FindGameObjectsWithTag("Player")[0];
+        targetTransform = target.transform;
     }
 
     private void Start()
@@ -42,7 +44,7 @@ public class ShootingSystem : MonoBehaviour
             {
                 //float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(transform.position - target.transform.position));
                 // ^ Value never used
-                float distance = Vector3.Distance(player.position, transform.position);
+                float distance = Vector3.Distance(targetTransform.position, transform.position);
 
                 if (distance < fieldOfView)
                     SpawnProjectiles();
@@ -52,7 +54,7 @@ public class ShootingSystem : MonoBehaviour
             {
                 //float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
                 // ^ Value never used
-                float distance = Vector3.Distance(player.position, transform.position);
+                float distance = Vector3.Distance(targetTransform.position, transform.position);
 
                 if (distance > fieldOfView)
                 {
@@ -73,7 +75,7 @@ public class ShootingSystem : MonoBehaviour
                 {
                     //float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position));
                     // ^ Value never used
-                    float distance = Vector3.Distance(player.position, transform.position);
+                    float distance = Vector3.Distance(targetTransform.position, transform.position);
 
                     if (distance < fieldOfView)
                     {

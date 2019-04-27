@@ -27,9 +27,12 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip walkingSound;
     private AudioSource source;
 
+    private Animator anim;
+
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -51,6 +54,15 @@ public class PlayerMovement : MonoBehaviour
         Move();
         GroundCheck();
 
+        if (h_move != 0 || v_move != 0)
+        {
+            anim.SetBool("Moving", true);
+        }
+        else
+        {
+            anim.SetBool("Moving", false);
+        }
+
         if (Input.GetButtonDown("Jump") && grounded && !jumpUsed)
         {
             Debug.Log("Jumping");
@@ -61,20 +73,23 @@ public class PlayerMovement : MonoBehaviour
         {
             Glide();
             isGliding = true;
+            anim.SetBool("Gliding", true);
             Debug.Log("Gliding");
         }
         else
         {
             isGliding = false;
+            anim.SetBool("Gliding", false);
         }
         if (!grounded)
         {
             moveSpeed = glideSpeed;
+            anim.SetBool("Grounded", false);
         }
         else
         {
             moveSpeed = defaultSpeed;
-            
+            anim.SetBool("Grounded", true);
         }
 
     }
@@ -121,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
         jumpUsed = true;
         StartCoroutine("JumpDelay");
         rb.AddForce(transform.up * jumpForce);
+        anim.SetTrigger("Jumped");
     }
 
     IEnumerator JumpDelay()
