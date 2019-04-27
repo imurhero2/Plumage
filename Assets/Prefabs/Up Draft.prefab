@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65530844561115042}
   - component: {fileID: 114965251358269698}
   - component: {fileID: 82402764734816376}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Up Draft
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4968014097080690}
   - component: {fileID: 198700811935205162}
   - component: {fileID: 199496847307158362}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leaf Vortex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,14 +54,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1869110338657718}
-  m_LocalRotation: {x: -0, y: -0.113416225, z: -0, w: 0.99354756}
-  m_LocalPosition: {x: 204.64594, y: 64.88109, z: 133.60849}
+  m_LocalRotation: {x: -0, y: 0.030361148, z: -0, w: 0.999539}
+  m_LocalPosition: {x: -53.11406, y: -15.2389145, z: 11.598488}
   m_LocalScale: {x: 8, y: 15, z: 8}
   m_Children:
   - {fileID: 4968014097080690}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -13.025001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.4800003, z: 0}
 --- !u!4 &4968014097080690
 Transform:
   m_ObjectHideFlags: 1
