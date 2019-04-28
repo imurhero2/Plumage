@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5578302, g: 0.7189375, b: 0.92263913, a: 1}
+  m_IndirectSpecularColor: {r: 0.25195968, g: 0.39067164, b: 0.5321782, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -747,7 +747,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: fad2359c7981901408b2468cb9105b50, type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: fad2359c7981901408b2468cb9105b50, type: 3}
       propertyPath: m_Name
@@ -2180,7 +2180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 383476479e2db2d459265261aee7f5bc, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 383476479e2db2d459265261aee7f5bc, type: 3}
       propertyPath: m_Name
@@ -2465,7 +2465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: fad2359c7981901408b2468cb9105b50, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: fad2359c7981901408b2468cb9105b50, type: 3}
       propertyPath: m_Name
@@ -4133,7 +4133,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4063886510099988, guid: e504d0f4c04f7a84fad2f97a775e6bf7, type: 2}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 114117727153918294, guid: e504d0f4c04f7a84fad2f97a775e6bf7,
         type: 2}
@@ -6653,6 +6653,99 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad927400dd8e1774f84c93e30bdd2158, type: 3}
   m_PrefabInternal: {fileID: 1242705020}
+--- !u!1 &1243216405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1243216409}
+  - component: {fileID: 1243216408}
+  - component: {fileID: 1243216407}
+  - component: {fileID: 1243216406}
+  m_Layer: 0
+  m_Name: End Island Objective
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1243216406
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: fa4c6075c968d41479d7e792c73e0dbe,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243216405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+--- !u!23 &1243216407
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: fa4c6075c968d41479d7e792c73e0dbe,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243216405}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+  - {fileID: 2100002, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+  - {fileID: 2100004, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+  - {fileID: 2100006, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1243216408
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: fa4c6075c968d41479d7e792c73e0dbe,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243216405}
+  m_Mesh: {fileID: 4300000, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+--- !u!4 &1243216409
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: fa4c6075c968d41479d7e792c73e0dbe, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243216405}
+  m_LocalRotation: {x: -0, y: 0.47228667, z: -0, w: 0.881445}
+  m_LocalPosition: {x: -6.3, y: 120, z: 449.8}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 56.366, z: 0}
 --- !u!1001 &1248547310
 Prefab:
   m_ObjectHideFlags: 0
@@ -7431,7 +7524,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
+  m_Size: {x: 80, y: 5, z: 80}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1399848180
 MeshFilter:
@@ -7446,13 +7539,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1399848178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.28, y: 155.48, z: 462.8}
+  m_LocalRotation: {x: -0, y: -0.23644818, z: -0, w: 0.9716441}
+  m_LocalPosition: {x: 84.4, y: 148.9, z: 522.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: -27.354002, z: 0}
 --- !u!1001 &1403578570
 Prefab:
   m_ObjectHideFlags: 0
@@ -10682,7 +10775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 383476479e2db2d459265261aee7f5bc, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 383476479e2db2d459265261aee7f5bc, type: 3}
       propertyPath: m_Name
