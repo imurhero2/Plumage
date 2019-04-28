@@ -45,14 +45,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        GroundCheck();
+
         h_move = Input.GetAxis("Horizontal");
         v_move = Input.GetAxis("Vertical");
-    }
-
-    private void FixedUpdate()
-    {
-        Move();
-        GroundCheck();
 
         if (h_move != 0 || v_move != 0)
         {
@@ -91,7 +87,11 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = defaultSpeed;
             anim.SetBool("Grounded", true);
         }
+    }
 
+    private void FixedUpdate()
+    {
+        Move();
     }
 
     public bool GroundCheck()

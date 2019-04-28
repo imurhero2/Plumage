@@ -43,6 +43,8 @@ public class OptionsMenu : MonoBehaviour
         // Takes in all the information regarding the PC hardware settings from the Start function and updates it for the player when chosen a specific resolution in game.
         Resolution newResolution = resolutions[resolutionIndex];
         Screen.SetResolution(newResolution.width, newResolution.height, Screen.fullScreen);
+        Debug.Log(newResolution.width);
+        Debug.Log(newResolution.height);
     }
 
     public void SetVolume (float volume)
