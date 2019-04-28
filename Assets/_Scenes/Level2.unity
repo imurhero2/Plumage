@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.054879114, g: 0.105901755, b: 0.2654675, a: 1}
+  m_IndirectSpecularColor: {r: 0.074236445, g: 0.13338181, b: 0.32180014, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1987,33 +1987,6 @@ Prefab:
     - target: {fileID: 1182297844130464, guid: 0f439ec201fcc1c4c988faac44408c34, type: 2}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4095124393509148, guid: 0f439ec201fcc1c4c988faac44408c34, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.929
-      objectReference: {fileID: 0}
-    - target: {fileID: 136494312609899594, guid: 0f439ec201fcc1c4c988faac44408c34,
-        type: 2}
-      propertyPath: m_Height
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4095124393509148, guid: 0f439ec201fcc1c4c988faac44408c34, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.547
-      objectReference: {fileID: 0}
-    - target: {fileID: 4095124393509148, guid: 0f439ec201fcc1c4c988faac44408c34, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 1.142
-      objectReference: {fileID: 0}
-    - target: {fileID: 95233045522752878, guid: 0f439ec201fcc1c4c988faac44408c34,
-        type: 2}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: b9606f464bf14f94b9766c1d60f6bf51, type: 3}
-    - target: {fileID: 54882767414826772, guid: 0f439ec201fcc1c4c988faac44408c34,
-        type: 2}
-      propertyPath: m_Interpolate
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f439ec201fcc1c4c988faac44408c34, type: 2}
