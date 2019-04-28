@@ -23,6 +23,7 @@ public class FlyingEnemyTest : MonoBehaviour
 
     private bool attack = false;
     private bool playerClose = false;
+    private bool forceApplied = false;
 
     private Vector3 startPos;
     Vector3 direction;
@@ -66,7 +67,10 @@ public class FlyingEnemyTest : MonoBehaviour
         if (distance <= lookRadius)
         {
             attack = true;
-            playerClose = true;
+            if (!forceApplied)
+            {
+                playerClose = true;
+            }
             // Debug.Log(attack);
             StartCoroutine("lookAt");
         }
@@ -78,13 +82,17 @@ public class FlyingEnemyTest : MonoBehaviour
         if (playerClose == true)
         {
             Vector3 direction = (target.position - transform.position).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
             yield return new WaitForSecondsRealtime(delayAttack);
         }
 
         // transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+        if (!forceApplied)
+        {
+            forceApplied = true;
+            rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+        }
         playerClose = false;
 
         Tidy();
