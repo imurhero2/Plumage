@@ -14,6 +14,7 @@ public class OptionsMenu : MonoBehaviour
     // The most complicated part of the entire code. For screen resolutions, each PC or hardware has their own set of defaulted resolutions.
     private void Start()
     {
+        Screen.fullScreen = false;
         int i;
 
         // Takes the array of the resolution and then clears it out so that new resolutions depending on computer hardware can be used.
@@ -52,7 +53,7 @@ public class OptionsMenu : MonoBehaviour
         // name this the same way as you name the audio parameter under the audio mixer. Ensure when adding script that when On Click is added to click on the dynamic int option (topmost option).
         // Dynamic int - sets the amount based on the UI interaction with player, I.E. if the player slides the volume slider to 0 the game updates itself to state that no audio will be used.
 
-        audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("volume", volume);
     }
 
     public void SetQuality (int qualityIndex)
@@ -64,8 +65,15 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetFullScreen (bool isFullScreen)
     {
-        // This code takes in the toggle and checks if the toggle is on with the boolean, if on then its fullscreen if not then its not fullscreen, can be switched with using windowed mode if needed.
         Screen.fullScreen = isFullScreen;
+        if (Screen.fullScreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
         Debug.Log(isFullScreen);
     }
 }

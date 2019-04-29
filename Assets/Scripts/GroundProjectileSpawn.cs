@@ -20,6 +20,7 @@ public class GroundProjectileSpawn : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Start()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.50015736, g: 0.651296, b: 0.8389883, a: 1}
+  m_IndirectSpecularColor: {r: 0.55339116, g: 0.71337014, b: 0.91556346, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -407,7 +407,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 412357100}
-  - component: {fileID: 412357099}
   - component: {fileID: 412357101}
   m_Layer: 5
   m_Name: MenuManager
@@ -416,18 +415,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &412357099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412357098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19ad62edad188ee4fa49feb2e7b73b05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highScoreText: {fileID: 0}
 --- !u!224 &412357100
 RectTransform:
   m_ObjectHideFlags: 0
